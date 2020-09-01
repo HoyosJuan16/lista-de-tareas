@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #3a6186;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(#89253e, #3a6186);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(#89253e, #3a6186);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto; }
+
+ul {
+  list-style: none; }
+
+.header {
+  background: #89253e;
+  color: #fff;
+  padding: 15px 0px;
+  border-bottom: 1px solid #fff; }
+  .header .contenedor-header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 15px; }
+    .header .contenedor-header .titulo {
+      grid-column: span 4;
+      text-transform: uppercase;
+      border-radius: 6px;
+      background: #fff;
+      color: #892353;
+      padding: 5px;
+      text-align: center; }
+    .header .contenedor-header .filtrar-tareas {
+      grid-column-start: 9;
+      grid-column-end: 13;
+      background: #fff;
+      border-radius: 6px;
+      padding: 5px 10px; }
+      .header .contenedor-header .filtrar-tareas input {
+        border: none;
+        border-radius: 6px;
+        padding: 5px 10px;
+        outline: none; }
+
+@media (max-width: 985px) {
+  .header .contenedor-header .titulo {
+    grid-column: span 6; }
+  .header .contenedor-header .filtrar-tareas {
+    grid-column: span 6; } }
+@media (max-width: 550px) {
+  .header .contenedor-header .titulo {
+    grid-column: span 12; }
+  .header .contenedor-header .filtrar-tareas {
+    grid-column: span 12; } }
+.main {
+  margin-top: 20px; }
+  .main .contenedor-main {
+    background: rgba(255, 255, 255, 0.25);
+    min-height: 400px;
+    border-radius: 6px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px; }
+    .main .contenedor-main .form-agregar-tarea {
+      grid-column: span 6;
+      height: 300px;
+      background: #fff;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .main .contenedor-main .form-agregar-tarea .titulo-form {
+        width: 100%;
+        text-align: center;
+        color: #89253e;
+        border-bottom: 1px solid #ccc;
+        padding: 5px; }
+      .main .contenedor-main .form-agregar-tarea .input-form {
+        display: flex;
+        flex-direction: column; }
+        .main .contenedor-main .form-agregar-tarea .input-form input {
+          margin: 5px 0px; }
+          .main .contenedor-main .form-agregar-tarea .input-form input[type='text'] {
+            padding: 5px;
+            width: 50%;
+            border-radius: 6px;
+            color: #495057;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            outline: none; }
+          .main .contenedor-main .form-agregar-tarea .input-form input[type='submit'] {
+            border: 1px solid #89253e;
+            color: white;
+            text-transform: uppercase;
+            background: #89253e;
+            padding: 10px;
+            transition: all .8s ease;
+            cursor: pointer; }
+            .main .contenedor-main .form-agregar-tarea .input-form input[type='submit']:hover {
+              color: #89253e;
+              border-color: #89253e;
+              background: #fff;
+              border-radius: 6px; }
+        .main .contenedor-main .form-agregar-tarea .input-form label {
+          cursor: pointer; }
+          .main .contenedor-main .form-agregar-tarea .input-form label input {
+            margin-right: 5px; }
+          .main .contenedor-main .form-agregar-tarea .input-form label span {
+            padding: 2.5px;
+            border-radius: 6px; }
+            .main .contenedor-main .form-agregar-tarea .input-form label span.etiqueta-ocio {
+              background: yellow; }
+            .main .contenedor-main .form-agregar-tarea .input-form label span.etiqueta-salud {
+              background: cyan; }
+            .main .contenedor-main .form-agregar-tarea .input-form label span.etiqueta-estudiar {
+              background: lightgreen; }
+            .main .contenedor-main .form-agregar-tarea .input-form label span.etiqueta-importante {
+              background: crimson;
+              color: #fff; }
+    .main .contenedor-main .listado-de-tareas {
+      grid-column: span 6;
+      background: #fff;
+      height: auto;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      padding: 5px; }
+      .main .contenedor-main .listado-de-tareas .tarea {
+        margin: 5px 0px;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer; }
+        .main .contenedor-main .listado-de-tareas .tarea .tarea-span {
+          padding: 5px; }
+        .main .contenedor-main .listado-de-tareas .tarea .etiquetas-botones .btn {
+          color: #fff;
+          padding: 5px;
+          border-radius: 6px;
+          transition: all .8s ease; }
+          .main .contenedor-main .listado-de-tareas .tarea .etiquetas-botones .btn.btn-ocio {
+            background: #ffff00; }
+          .main .contenedor-main .listado-de-tareas .tarea .etiquetas-botones .btn.btn-salud {
+            background: #40c4ff; }
+          .main .contenedor-main .listado-de-tareas .tarea .etiquetas-botones .btn.btn-estudiar {
+            background: #8e24aa; }
+          .main .contenedor-main .listado-de-tareas .tarea .etiquetas-botones .btn.btn-importante {
+            background: #EA2027; }
+          .main .contenedor-main .listado-de-tareas .tarea .etiquetas-botones .btn.btn-eliminar {
+            border: 1px solid #ff1744;
+            background: #d50000;
+            cursor: pointer; }
+            .main .contenedor-main .listado-de-tareas .tarea .etiquetas-botones .btn.btn-eliminar:hover {
+              background: #fff;
+              color: #d50000; }
+
+@media (max-width: 1030px) {
+  .main .contenedor-main .form-agregar-tarea {
+    grid-column: span 12; }
+  .main .contenedor-main .listado-de-tareas {
+    grid-column: span 12; } }
+
+/*# sourceMappingURL=main.css.map */
