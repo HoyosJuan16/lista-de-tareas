@@ -8,50 +8,13 @@
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 15px;
     .titulo{
-      grid-column: span 4;
+      grid-column: span 12;
       text-transform: uppercase;
       border-radius: 6px;
       background: #fff;
       color: #892353;
       padding: 5px;
       text-align: center;
-    }
-    .filtrar-tareas{
-      grid-column-start: 9;
-      grid-column-end: 13;
-      background: #fff;
-      border-radius: 6px;
-      padding: 5px 10px;
-      input{
-        border:none;
-        border-radius: 6px;
-        padding: 5px 10px;
-        outline: none;
-      }
-    }
-  }
-}
-@media(max-width:985px){
-  .header{
-    .contenedor-header{
-      .titulo{
-        grid-column: span 6;
-      }
-      .filtrar-tareas{
-        grid-column: span 6;
-      }
-    }
-  }
-}
-@media(max-width:550px){
-  .header{
-    .contenedor-header{
-      .titulo{
-        grid-column: span 12;
-      }
-      .filtrar-tareas{
-        grid-column: span 12;
-      }
     }
   }
 }

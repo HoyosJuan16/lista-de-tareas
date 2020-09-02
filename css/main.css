@@ -21,6 +21,16 @@ body {
 ul {
   list-style: none; }
 
+.seleccionado {
+  transform: scale(1.025) rotate(-1deg);
+  box-shadow: 0px 0px 20px rgba(149, 153, 159, 0.16); }
+
+.fantasma {
+  border: 2px dotted #000; }
+
+.drag {
+  opacity: 0; }
+
 .header {
   background: #89253e;
   color: #fff;
@@ -31,35 +41,14 @@ ul {
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 15px; }
     .header .contenedor-header .titulo {
-      grid-column: span 4;
+      grid-column: span 12;
       text-transform: uppercase;
       border-radius: 6px;
       background: #fff;
       color: #892353;
       padding: 5px;
       text-align: center; }
-    .header .contenedor-header .filtrar-tareas {
-      grid-column-start: 9;
-      grid-column-end: 13;
-      background: #fff;
-      border-radius: 6px;
-      padding: 5px 10px; }
-      .header .contenedor-header .filtrar-tareas input {
-        border: none;
-        border-radius: 6px;
-        padding: 5px 10px;
-        outline: none; }
 
-@media (max-width: 985px) {
-  .header .contenedor-header .titulo {
-    grid-column: span 6; }
-  .header .contenedor-header .filtrar-tareas {
-    grid-column: span 6; } }
-@media (max-width: 550px) {
-  .header .contenedor-header .titulo {
-    grid-column: span 12; }
-  .header .contenedor-header .filtrar-tareas {
-    grid-column: span 12; } }
 .main {
   margin-top: 20px; }
   .main .contenedor-main {
@@ -149,7 +138,8 @@ ul {
           color: #fff;
           padding: 5px;
           border-radius: 6px;
-          transition: all .8s ease; }
+          transition: all .8s ease;
+          margin: 0px 2.5px; }
           .main .contenedor-main .listado-de-tareas .tarea .etiquetas-botones .btn.btn-ocio {
             background: #ffff00; }
           .main .contenedor-main .listado-de-tareas .tarea .etiquetas-botones .btn.btn-salud {

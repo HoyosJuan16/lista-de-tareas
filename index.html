@@ -12,17 +12,14 @@
   <!-- HEADER -->
   <header class="header">
     <div class="contenedor contenedor-header">
-      <h2 class="titulo">Lista de Tareas</h2>
-      <form action="#" class="filtrar-tareas">
-        <input type="text" placeholder="Filtrar tareas">
-      </form>
+      <h2 class="titulo">Lista de Tareas con LocalStorage</h2>
     </div>
   </header>
   
   <!-- MAIN -->
   <main class="main">
     <div class="contenedor contenedor-main">
-      <form action="#" class="form-agregar-tarea">
+      <form action="#" class="form-agregar-tarea" id='formulario'>
         <h3 class='titulo-form'>Agregar Tarea</h3>
         <div class='input-form'>
           <label for="nombre-tarea">Nombre de la tarea:</label>
@@ -30,18 +27,18 @@
         </div>
         <div class='input-form'>
           <label>Etiquetas</label>
-          <label for="ocio"><input type="checkbox" name="etiquetas[]" id="ocio" value='ocio'><span class='etiqueta-ocio'>Ocio</span></label>
-          <label for="salud"><input type="checkbox" name="etiquetas[]" id="salud" value='salud'><span class='etiqueta-salud'>Salud</span></label>
-          <label for="estudiar"><input type="checkbox" name="etiquetas[]" id="estudiar" value='estudiar'><span class='etiqueta-estudiar'>Estudiar</span></label>
-          <label for="importante"><input type="checkbox" name="etiquetas[]" id="importante" value='importante'><span class='etiqueta-importante'>Importante</span></label>
+          <label for="ocio"><input type="checkbox" name="etiquetas" id="ocio" value='ocio'><span class='etiqueta-ocio'>Ocio</span></label>
+          <label for="salud"><input type="checkbox" name="etiquetas" id="salud" value='salud'><span class='etiqueta-salud'>Salud</span></label>
+          <label for="estudiar"><input type="checkbox" name="etiquetas" id="estudiar" value='estudiar'><span class='etiqueta-estudiar'>Estudiar</span></label>
+          <label for="importante"><input type="checkbox" name="etiquetas" id="importante" value='importante'><span class='etiqueta-importante'>Importante</span></label>
         </div>
         <div class="input-form">
           <input type="submit" value="Agregar Tarea">
         </div>
       </form>
       <ul class="listado-de-tareas">
-        <li class='tarea' data-id='1'>
-          <span class="tarea-span">Tarea 1</span>
+        <!-- <li class='tarea' data-id='2'>
+          <span class="tarea-span">Tarea 2</span>
           <div class="etiquetas-botones">
             <span class="btn btn-ocio">Ocio</span>
             <span class="btn btn-salud">Salud</span>
@@ -50,10 +47,21 @@
             <button class="btn btn-eliminar">X</button>
           </div>
         </li>
+        <li class='tarea' data-id='3'>
+          <span class="tarea-span">Tarea 3</span>
+          <div class="etiquetas-botones">
+            <span class="btn btn-ocio">Ocio</span>
+            <span class="btn btn-salud">Salud</span>
+            <span class="btn btn-estudiar">Estudiar</span>
+            <span class="btn btn-importante">Importante</span>
+            <button class="btn btn-eliminar">X</button>
+          </div>
+        </li> -->
       </ul>
     </div>
   </main>
-
+  
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
   <script src="./js/app.js"></script>
 </body>
 </html>
