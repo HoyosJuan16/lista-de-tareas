@@ -64,16 +64,16 @@
             padding: 2.5px;
             border-radius: 6px;
             &.etiqueta-ocio{ 
-              background: yellow;
+              background: #ffff00;
             }
             &.etiqueta-salud{ 
-              background: cyan;
+              background: #40c4ff;
             }
             &.etiqueta-estudiar{ 
-              background: lightgreen;
+              background: #8e24aa;
             }
             &.etiqueta-importante{ 
-              background: crimson;
+              background: #EA2027;
               color: #fff;
             }
           }
@@ -140,6 +140,23 @@
       }
       .listado-de-tareas{
         grid-column: span 12;
+      }
+    }
+  }
+}
+@media(max-width:600px){
+  .main{
+    .contenedor-main{
+      .listado-de-tareas{
+        .tarea{
+          flex-wrap: wrap;
+          .tarea-span{
+            width: 100%;
+          }
+          .etiquetas-botones{
+            width: 100%;
+          }
+        }
       }
     }
   }

@@ -109,13 +109,13 @@ ul {
             padding: 2.5px;
             border-radius: 6px; }
             .main .contenedor-main .form-agregar-tarea .input-form label span.etiqueta-ocio {
-              background: yellow; }
+              background: #ffff00; }
             .main .contenedor-main .form-agregar-tarea .input-form label span.etiqueta-salud {
-              background: cyan; }
+              background: #40c4ff; }
             .main .contenedor-main .form-agregar-tarea .input-form label span.etiqueta-estudiar {
-              background: lightgreen; }
+              background: #8e24aa; }
             .main .contenedor-main .form-agregar-tarea .input-form label span.etiqueta-importante {
-              background: crimson;
+              background: #EA2027;
               color: #fff; }
     .main .contenedor-main .listado-de-tareas {
       grid-column: span 6;
@@ -161,5 +161,12 @@ ul {
     grid-column: span 12; }
   .main .contenedor-main .listado-de-tareas {
     grid-column: span 12; } }
+@media (max-width: 600px) {
+  .main .contenedor-main .listado-de-tareas .tarea {
+    flex-wrap: wrap; }
+    .main .contenedor-main .listado-de-tareas .tarea .tarea-span {
+      width: 100%; }
+    .main .contenedor-main .listado-de-tareas .tarea .etiquetas-botones {
+      width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */

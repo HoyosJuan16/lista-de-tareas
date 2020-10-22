@@ -15,6 +15,7 @@ const agregarTarea = (e) => {
   }
   lista.appendChild(crearLi(guardar,obtenerTareasLS().length))
   agregarTareaLS(guardar)
+  e.target.reset()
 }
 const agregarTareaLS = (tarea) =>{
   let tareas = obtenerTareasLS()
